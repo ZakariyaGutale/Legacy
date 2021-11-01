@@ -1,5 +1,7 @@
 *{
     font-family: 'Zen Kaku Gothic New', sans-serif;
+    box-sizing: border-box;
+    
 }
 :root{
     font-size: 16px;
@@ -16,6 +18,115 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container{
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background:var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0,0.2);
+}
+
+.container .card::before{
+    content:'';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255,255, 0.1);
+    pointer-events: none;
+}
+.container .card .content{
+    padding: 30px;
+    text-align: center;
+}
+.container .card .content h2{
+    position: absolute;
+    right: 30px;
+    font-size: 4rem;
+    font-weight: 800px;
+    color:#0c002b;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+.container .card:hover .content h2{
+    opacity: 1;
+    transform: translateY(-70px);
+}
+.container .card .content h3{
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container .card .content p{
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+    font-weight: 300;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container .card:hover .content h3
+.container .card:hover .content p{
+    opacity: 1; 
+}
+.container .card .content a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #fff;
+    color: #0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.container .card span{
+    transition: 0.5;
+}
+
+.container .card span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent,#141418);
+    animation: animate1 2s linear infinite;
+}
+main > h1{
+    text-align: center;
+    font-size: 2.7rem;
+}
+h1:hover{
+    transition: ease;
+    transition: 100ms;
 }
 body::-webkit-scrollbar{
     width: 0.25rem;
@@ -34,6 +145,7 @@ main{
     position: fixed;
     background-color: var(--bg-primary);
     transition: 200ms ease;
+    z-index: 6;
 }
 .navbar-nav{
     list-style: none;
@@ -143,3 +255,25 @@ main {
     }
 
 }
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
