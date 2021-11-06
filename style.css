@@ -6,8 +6,8 @@
 :root{
     font-size: 16px;
     font-family:'Open Sans';
-    --text-primary: #b6b6b6;
-    --text-secondary:#ececec;
+    --text-primary:##000000;
+    --text-secondary:##000000;
     --bg-primary:#23232e;
     --bg-secondary:#141418;
     --transistion-speed: 600ms;
@@ -24,9 +24,96 @@ body{
     background-attachment: fixed;
     height: 100vh;
 }
+.container-caption {
+    font-family: "Archivo Black", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+  
+.words {
+    color:#141418;
+    font-size: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+  
+.words span {
+    font-size: 5rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+}
+  
+@keyframes move {
+    0% {
+      transform: translate(-30%, 0);
+    }
+    50% {
+      text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+      transform: translate(30%, 0);
+    }
+}
+  
+.words span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+  
+.words span:nth-child(3) {
+    animation-delay: 1s;
+}
+  
+.words span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+  
+.words span:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+.words span:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+  
+.words span:nth-child(7) {
+    animation-delay: 3s;
+}
 
+.wrapper {
+    height: 10vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.typing-demo {
+    width: 24ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 .container{
-    width: 1100px;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +125,7 @@ body{
     position: relative;
     width: 300px;
     height: 400px;
-    background:var(--bg-primary);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +152,7 @@ body{
     right: 30px;
     font-size: 4rem;
     font-weight: 800px;
-    color:slateblue;
+    color:sienna;
     z-index: 1;
     opacity: 0.1;
     transition: 0.5s;
@@ -77,7 +164,7 @@ body{
 .container .card .content h3{
     position: relative;
     font-size: 1.5em;
-    color: #fff;
+    color:black;
     z-index: 2;
     opacity: 0.5;
     letter-spacing: 1px;
@@ -86,10 +173,9 @@ body{
 .container .card .content p{
     position: relative;
     font-size: 1em;
-    color: #fff;
+    color:#141418;
     z-index: 2;
     font-weight: 300;
-    opacity: 0.5;
     letter-spacing: 1px;
     transition: 0.5s;
 }
@@ -101,8 +187,8 @@ body{
     display: inline-block;
     margin-top: 15px;
     padding: 8px 15px;
-    background: #fff;
-    color: #0c002b;
+    background:sienna;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -135,7 +221,7 @@ body::-webkit-scrollbar-track{
     background: #1e1e24;
 }
 body::-webkit-scrollbar-thumb{
-    background: #6649b8;
+    background:#141418;
 }
 main{
     margin-left: 5rem;
@@ -143,9 +229,8 @@ main{
 }
 .navbar{
     position: fixed;
-    background-color: var(--bg-primary);
     transition: 200ms ease;
-    z-index: 6;
+    z-index: 5;
 }
 .navbar-nav{
     list-style: none;
@@ -172,7 +257,6 @@ main{
 }
 .nav-link:hover{
     filter: grayscale(0%) opacity(1);
-    background:var(--bg-secondary);
     color: var(--text-secondary);
 }
 .link-text{
@@ -190,10 +274,10 @@ main{
     display: block;
 }
 .fa-primary{
-    color:teal;
+    color: black;
 }
 .fa-secondary{
-    color:lightblue;
+    color:sienna;
 }
 .fa-primary,.fa-secondary{
     transition: var(--transistion-speed);
@@ -204,7 +288,6 @@ main{
     margin-bottom: 1rem;
     text-align: center;
     color: var(--text-secondary);
-    background: var(--bg-secondary);
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
@@ -261,7 +344,7 @@ html, body {
   }
   
   body {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background: linear-gradient(-45deg,#FFFDD0,#b6b6b6, #ececec, #e0e7da);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
   }
@@ -276,4 +359,19 @@ html, body {
       100% {
           background-position: 0% 50%;
       }
+  }
+svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: sienna;
+}
+  
+.svg-icon circle {
+    stroke:sienna;
+    stroke-width: 1;
   }
