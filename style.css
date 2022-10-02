@@ -131,6 +131,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     padding-left: 20px;
+    margin-top: 40rem;
 }
 
 .container .card{
@@ -317,6 +318,7 @@ main{
         bottom: 0;
         width: 100vw;
         height: 5rem;
+        
       }
     
 .logo {
@@ -356,22 +358,11 @@ html, body {
   }
   
   body {
-      background: linear-gradient(-45deg,#FFFDD0,#b6b6b6, #ececec, #e0e7da);
-      background-size: 1000% 1000%;
-      animation: gradient 15s ease infinite;
+      background: #e0e7da;
   }
   
-  @keyframes gradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      }
-  }
+ 
+
 svg-icon {
     width: 1em;
     height: 1em;
