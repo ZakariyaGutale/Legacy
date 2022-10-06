@@ -8,6 +8,7 @@
             <img width="150" height="150" src="/img/html-1.svg">
 </p>
 Using Only HTML 
-
+<p align="center">
             <img width="150" height="150" src="/img/css-3.svg">
+            </p>
 And CSS
