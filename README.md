@@ -3,5 +3,8 @@
 👨‍💻 Featuring The best Tools!
 
 <p align="left">
-            <img width="256" height="256" src="/img/html-1.svg">
+            <img width="150" height="150" src="/img/html-1.svg">
+</p>
+<p align="right">
+            <img width="150" height="150" src="/img/css-3.svg">
 </p>
