@@ -4,7 +4,7 @@
 
 👨‍💻 Featuring The best Tools!
 
-<p align="left">
+<p align="center">
             <img width="150" height="150" src="/img/html-1.svg">
 </p>
 Using Only HTML 
