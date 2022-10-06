@@ -4,6 +4,8 @@
 
 👨‍💻 Featuring The best Tools!
 
+✏️Created by Zakaria Nur with only using CSS and HTML
+
 <p align="center">
             <img width="150" height="150" src="/img/html-1.svg">
 </p>
